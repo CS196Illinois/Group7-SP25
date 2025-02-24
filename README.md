@@ -1,6 +1,6 @@
 # Group 7
 
-Project Name: PROJECT_NAME
+Project Name: Sports Game Predictor
 
 [MVP Link](https://docs.google.com/document/d/1WaP1MTfYSf1Ys3g_xA91742b-rL8rX3F/edit)
 
