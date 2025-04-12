@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match Predictions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #e3efff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #cde0ff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      background-color: #b5cfff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+    }
+
+    .card {
+      background-color: #dbe9ff;
+      margin: 20px auto;
+      border-radius: 10px;
+      padding: 15px;
+      width: 85%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .box {
+      background-color: #aed0ff;
+      border-radius: 8px;
+      padding: 10px;
+      width: 30%;
+      margin: 5px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: #f0f4fc;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .footer-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    img.stadium-logo {
+      width:65px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="index.html" class="back-button">←</a>
+    <div>English Premier League<br>Liverpool vs Chelsea</div>
+  </div>
+
+  <div class="card">
+    <h3>Predictions</h3>
+
+    <div class="section-title">Win Percentage</div>
+    <div class="row">
+      <div class="box"><strong>Liverpool F.C.</strong><br>30%</div>
+      <div class="box"><strong>Draw</strong><br>46%</div>
+      <div class="box"><strong>Chelsea F.C.</strong><br>24%</div>
+    </div>
+
+    <div class="section-title">Scores</div>
+    <div class="row">
+      <div class="box">Liverpool F.C<br>1</div>
+      <div class="box">Chelsea F.C<br>1</div>
+    </div>
+
+    <div class="section-title">Half-time Scores</div>
+    <div class="row">
+      <div class="box">Liverpool F.C<br>1</div>
+      <div class="box" style="border: 2px solid blue;">Chelsea F.C<br>0</div>
+    </div>
+
+    <div class="section-title">Shots Attempted</div>
+    <div class="row">
+      <div class="box">Liverpool F.C<br>13</div>
+      <div class="box">Chelsea F.C<br>9</div>
+    </div>
+
+    <div class="section-title">Shots On Target</div>
+    <div class="row">
+      <div class="box">Liverpool F.C<br>5</div>
+      <div class="box">Chelsea F.C<br>4</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-item">
+      <img class = "stadium-logo" src="images/stadium logo.png" alt="Games">
+      <p >Games</p>
+    </div>
+    <div class="footer-item">
+      <img src="images/time.png" alt="Past Games">
+      <p>Past Games</p>
+    </div>
+    <div class="footer-item">
+      <img src="images/accuracy.png" alt="Accuracy">
+      <p>Accuracy</p>
+    </div>
+  </div>
+
+</body>
+</html>

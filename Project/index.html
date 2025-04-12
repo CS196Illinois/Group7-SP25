@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports Predictions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #d6e6f7;
+      padding: 10px;
+    }
+
+
+    .navbar {
+      background-color: #f0f4fc;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .navbar img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .game {
+      background-color: #b8d5f0;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px auto;
+      max-width: 500px;
+    }
+
+    .teams {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .teams img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .vs {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .prediction {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .prediction span {
+      color: #b22222;
+      font-weight: bold;
+    }
+
+    .down-arrow {
+      width: 40px;
+      height: 40px;
+      background-color: #d1d9f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.3s;
+  }
+
+  .down-arrow:hover {
+    background-color: #b0c4de;
+  }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      padding: 10px 0;
+    }
+
+    .footer-item {
+      text-align: center;
+    }
+
+    .footer-item img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    img.stadium-logo {
+      width:65px;
+    }
+
+
+    .footer-item p {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-item">
+      <span>☰</span>
+      <p>More</p>
+    </div>
+    <div class="nav-item">
+      <span>🏠</span>
+      <p>Home</p>
+    </div>
+    <div class="nav-item">
+      <span>⚽</span>
+      <p>EPL</p>
+    </div>
+    <div class="nav-item">
+      <span>⚽</span>
+      <p>La Liga</p>
+    </div>
+    <div class="nav-item">
+      <span>⚽</span>
+      <p>Serie A</p>
+    </div>
+    <div class="nav-item">
+      <span>🏀</span>
+      <p>NBA</p>
+    </div>
+    <div class="nav-item">
+      <span>🏈</span>
+      <p>NFL</p>
+    </div>
+  </div>
+  
+
+  <h2>Upcoming Games</h2>
+
+  <!-- Game -->
+  <div class="game">
+    <div class="teams">
+      <img src="images/liverpool.png">
+      <div class="vs">vs</div>
+      <img src="images/chelsea.png" >
+    </div>
+    <div class="prediction">
+      Prediction: <span>DRAW</span><br>
+      1 - 1
+    </div>
+    <a href="predictions.html" target="_blank" class="down-arrow">⬇</a>
+  </div>
+
+
+
+  <!-- Game 2 -->
+  <div class="game">
+    <div class="teams">
+      <img src="images/liverpool.png">
+      <div class="vs">vs</div>
+      <img src="images/chelsea.png">
+    </div>
+    <div class="prediction">
+      Prediction: <span>DRAW</span><br>
+      1 - 1
+    </div>
+    <a href="predictions.html" target="_blank" class="down-arrow">⬇</a>
+  </div>
+
+   <!-- Game 3 -->
+   <div class="game">
+    <div class="teams">
+      <img src="images/liverpool.png">
+      <div class="vs">vs</div>
+      <img src="images/chelsea.png">
+    </div>
+    <div class="prediction">
+      Prediction: <span>DRAW</span><br>
+      1 - 1
+    </div>
+    <a href="predictions.html" target="_blank" class="down-arrow">⬇</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-item">
+      <img class = "stadium-logo" src="images/stadium logo.png" alt="Games">
+      <p >Games</p>
+    </div>
+    <div class="footer-item">
+      <img src="images/time.png" alt="Past Games">
+      <p>Past Games</p>
+    </div>
+    <div class="footer-item">
+      <img src="images/accuracy.png" alt="Accuracy">
+      <p>Accuracy</p>
+    </div>
+  </div>
+
+</body>
+</html>
