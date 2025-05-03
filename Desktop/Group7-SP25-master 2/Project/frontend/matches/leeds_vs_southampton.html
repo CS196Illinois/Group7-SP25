@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match Predictions</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #e3efff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #cde0ff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      background-color: #b5cfff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    .card {
+      background-color: #dbe9ff;
+      margin: 20px auto;
+      border-radius: 10px;
+      padding: 15px;
+      width: 85%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .box {
+      background-color: #aed0ff;
+      border-radius: 8px;
+      padding: 10px;
+      width: 30%;
+      margin: 5px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: #f0f4fc;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .footer-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    img.stadium-logo {
+      width: 65px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="index.html" class="back-button">←</a>
+    <div>English Premier League<br>Leeds vs Southampton</div>
+  </div>
+
+  <div class="card">
+    <h3>Predictions</h3>
+
+    <div class="section-title">Win Percentage</div>
+    <div class="row">
+      <div class="box"><strong>Leeds</strong><br>62.92%</div>
+      <div class="box"><strong>Draw</strong><br>0.0%</div>
+      <div class="box"><strong>Southampton</strong><br>37.08%</div>
+    </div>
+
+    <div class="section-title">Full Time Scores</div>
+    <div class="row">
+      <div class="box">Leeds<br>1.05</div>
+      <div class="box">Southampton<br>0.6188333333333333</div>
+    </div>
+
+    <div class="section-title">First Half Scores</div>
+    <div class="row">
+      <div class="box">Leeds<br>1</div>
+      <div class="box">Southampton<br>0</div>
+    </div>
+
+    <div class="section-title">Total Shots</div>
+    <div class="row">
+      <div class="box">Leeds<br>13 shots</div>
+      <div class="box">Southampton<br>11 shots</div>
+    </div>
+
+    <div class="section-title">Shots on Target</div>
+    <div class="row">
+      <div class="box">Leeds<br>4 on target</div>
+      <div class="box">Southampton<br>4 on target</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <!-- Add any footer content or icons here -->
+  </div>
+
+</body>
+</html>

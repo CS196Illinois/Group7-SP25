@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports game predictor page3-4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <button class="icon">☰</button>
+    <button class="icon">🏠</button>
+    <button class="icon">⚽</button>
+    <button class="icon">⚽</button>
+    <button class="icon">⚽</button>
+    <button class="icon">🏀</button>
+    <button class="icon">🏈</button>
+  </nav>
+  <main class="content">
+    <section class="page past-games">
+      <h2>Past Games</h2>
+      <div class="game-card">
+        <div class="league"><i class="fas fa-futbol"></i> EPL</div>
+        <div class="teams">
+          <img src="LFC.png" alt="Liverpool Logo" class="team-logo">
+          <div class="vs-text">vs</div>
+          <img src="CFC.png" alt="Chelsea Logo" class="team-logo">
+        </div>
+        <div class="result">
+          <strong>Liverpool F.C.</strong> vs <strong>Chelsea F.C.</strong><br>
+          Final: <span class="winner">Liverpool Wins</span><br>
+          2 - 1
+        </div>
+        <div class="down-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="game-card">
+        <div class="league"><i class="fas fa-futbol"></i> EPL</div>
+        <div class="teams">
+          <img src="liverpool.png" alt="Liverpool Logo" class="team-logo">
+          <div class="vs-text">vs</div>
+          <img src="chelsea.png" alt="Chelsea Logo" class="team-logo">
+        </div>
+        <div class="result">
+          <strong>Liverpool F.C.</strong> vs <strong>Chelsea F.C.</strong><br>
+          Final: <span class="winner">Liverpool Wins</span><br>
+          2 - 1
+        </div>
+        <div class="down-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </section>
+    <section class="page accuracy">
+      <h2>Accuracy</h2>
+      <div class="stats-card">
+        <div class="league"><i class="fas fa-futbol"></i> EPL</div>
+        <div class="stats-row">
+          <div>
+            <p><strong>Last 10 Games:</strong></p>
+            <p>Winning Team: <span class="green">80.5%</span></p>
+            <p>Score: <span class="red">28%</span></p>
+            <p>Half time Score: <span class="red">31%</span></p>
+            <p>Number of Shots: <span class="blue">50%</span></p>
+            <p>Shots on Target: <span class="blue">50%</span></p>
+            <p>Leading Scorer: <span class="purple">40%</span></p>
+          </div>
+          <div>
+            <p><strong>Total:</strong></p>
+            <p>Winning Team: <span class="green">70.5%</span></p>
+            <p>Score: <span class="red">31%</span></p>
+            <p>Number of Shots: <span class="blue">40%</span></p>
+            <p>Shots on Target: <span class="blue">50%</span></p>
+            <p>Leading Scorer: <span class="purple">50%</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="predictor">
+    <h2>Predict a Match</h2>
+    <input type="text" id="home" placeholder="Home team">
+    <input type="text" id="away" placeholder="Away team">
+    <input type="text" id="hour" placeholder="Hour (e.g. 16)">
+    <button onclick="predictMatch()">Predict</button>
+    <p id="predictionResult"></p>
+  </section>
+  
+  <nav class="bottom-nav">
+    <button class="tab">
+      <img src="Game icon.png" alt="Games" class="tab-icon">
+      <span>Games</span>
+    </button>
+    <button class="tab">
+      <img src="past game icon.png" alt="Past Games" class="tab-icon">
+      <span>Past Games</span>
+    </button>
+    <button class="tab">
+      <img src="accuracy icon.png" alt="Accuracy" class="tab-icon">
+      <span>Accuracy</span>
+    </button>
+  </nav>
+  
+  <script>
+    async function predictMatch() {
+      const home = document.getElementById("home").value;
+      const away = document.getElementById("away").value;
+      const hour = document.getElementById("hour").value;
+  
+      const res = await fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ home, away, hour })
+      });
+  
+      const data = await res.json();
+      document.getElementById("predictionResult").textContent = data.prediction;
+    }
+  </script>
+  </body>
+  </html>
+  
+</body>
+</html>
